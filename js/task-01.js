@@ -1,17 +1,20 @@
 
-const allCategories = document.querySelector("ul#categories");
+const allCategories = document.querySelectorAll(".item");
+console.log(`Number of categories: ${allCategories.length}`);
 
-const listElem = allCategories.children;
 
-console.log(`Number of categories: ${listElem.length}`);
+const elements = allCategories.forEach( element => {
 
-for (let i = 0; i < listElem.length; i += 1) {
-  const childLi = listElem[i].children;
-  const nameContent = childLi[0].textContent;
+  const nameContent = element.firstElementChild.textContent;
   console.log(`Category: ${nameContent}`);
-  const elemCount = childLi[1].children.length;
+
+  const elemCount = element.lastElementChild.children.length;
   console.log(`Elements: ${elemCount}`);
+
+
 }
+)
+
 
 
 
