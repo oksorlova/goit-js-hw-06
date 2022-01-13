@@ -17,9 +17,11 @@ const newItemEl = document.createElement('li');
 newItemEl.textContent = ingredientsItem;
 newItemEl.classList.add('item');
 
-ingredientsList.appendChild(newItemEl);
+ingredientsList.append(newItemEl);
 
 });
+
+console.log(elements);
 
 
 
